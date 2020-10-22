@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import ButtonAppBar from './main-appbar';
 import theme from '@material-ui/core/styles';
 import Header from '../../images/bgImages/header.png';
 
