@@ -1,6 +1,5 @@
 import React from 'react';
-import SimpleButton from '../components/LandingPage/main-button'
-import HeaderAndTitle from '../components/LandingPage/main-header';
+import HeaderAndTitle from '../components/main-header';
 
 export default function FirstPage() {
     return(

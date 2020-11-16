@@ -1,37 +1,58 @@
 import React from "react";
 import { Box } from "@material-ui/core";
-import Image from "../../../src/images/bgImages/header.png";
+import Image from "../../../src/images/bgImages/spaciator-dim-background.png";
+import ImageTitle from "../../../src/images/bgImages/spaciator_title.png";
+import { makeStyles } from '@material-ui/styles';
+
+const useStyles = makeStyles((theme)=>({
+  Title: {
+    height: '100%',
+    backgroundRepeat: 'no-repeat' 
+  },
+  TitleContainer: {
+    zIndex: 2
+  }
+}))
 
 const HeaderContainer = (props) => {
+  const classes = useStyles();
   return (
     <Box
       component="div"
       className="header-container"
       style={{
-        display: "flex",
-        width: "100%",
-        height: "100vh"
+        height: "100vh",
+        display: 'flex',
+        justifycContent: 'center',
+        alignItems: 'center',
+        backgroundImage: `url(${Image})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        zIndex:1
       }}
     >
       <Box
-        style={{
-          backgroundImage: `url(${Image})`,
-          backgroundRepeat: "no-repeat",
-          width: "100%",
-          height: "auto",
-        }}
+      className={classes.TitleContainer}
+      component="div"
+        // style={{
+        //   backgroundImage: `url(${Image})`,
+        //   backgroundRepeat: "no-repeat",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "contain",
+        //   height: "100%"
+        // }}
       >
-        <Box component="div" className="header-description">
-          <Box
-            component="p"
-            style={{
-              color: "#dac22c",
-              fontSize: "3rem",
-            }}
-          >
-            The Five W's
-          </Box>
+        <Box
+        className={classes.Title}
+        component="div"
+        style={{
+          backgroundImage: `url(${ImageTitle})`,
+          width: '100%',
+          height: '100%',
+          left: 'auto',
+        }}>
         </Box>
+       
       </Box>
     </Box>
   );
