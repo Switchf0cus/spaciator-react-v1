@@ -1,17 +1,20 @@
 import React from "react";
 import { Box } from "@material-ui/core";
-import Image from "../../../src/images/bgImages/spaciator-dim-background.png";
-import ImageTitle from "../../../src/images/bgImages/spaciator_title.png";
+import TheFiveWs from './main-header-title';
 import { makeStyles } from '@material-ui/styles';
+import FullImage from '../../images/bgImages/header.png'
 
 const useStyles = makeStyles((theme)=>({
   Title: {
-    height: '100%',
-    backgroundRepeat: 'no-repeat' 
+    display: 'flex',
+    height: "100vh",
+    justifycContent: 'center',
+    alignItems: 'center',
+    backgroundImage: `url(${FullImage})`,
+    backgroundAttachment: 'fixed',
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "100% 100%",
   },
-  TitleContainer: {
-    zIndex: 2
-  }
 }))
 
 const HeaderContainer = (props) => {
@@ -19,39 +22,16 @@ const HeaderContainer = (props) => {
   return (
     <Box
       component="div"
-      className="header-container"
+      className={classes.Title}
       style={{
-        height: "100vh",
-        display: 'flex',
-        justifycContent: 'center',
-        alignItems: 'center',
-        backgroundImage: `url(${Image})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        zIndex:1
+       
       }}
     >
       <Box
       className={classes.TitleContainer}
       component="div"
-        // style={{
-        //   backgroundImage: `url(${Image})`,
-        //   backgroundRepeat: "no-repeat",
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "contain",
-        //   height: "100%"
-        // }}
       >
-        <Box
-        className={classes.Title}
-        component="div"
-        style={{
-          backgroundImage: `url(${ImageTitle})`,
-          width: '100%',
-          height: '100%',
-          left: 'auto',
-        }}>
-        </Box>
+      <TheFiveWs/>
        
       </Box>
     </Box>
