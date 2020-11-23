@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@material-ui/core";
-import TheFiveWs from './main-header-title';
+import TheFiveWs from './theFiveWs';
 import { makeStyles } from '@material-ui/styles';
 import FullImage from '../../images/bgImages/header.png'
 
