@@ -14,7 +14,7 @@ function TheFiveWs() {
         component="h1"
         style={{
             fontFamily: 'Retro Gaming',
-            fontSize: '6rem',
+            fontSize: '5rem',
             color: '#dac22c',
         }}
         >
