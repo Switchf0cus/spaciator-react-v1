@@ -1,9 +1,12 @@
 import React from 'react';
 import HeaderAndTitle from '../components/main-header';
+import FirstContentContainer from '../components/LandingPage/first-content-component'
 
 export default function FirstPage() {
     return(
-        <HeaderAndTitle/>
-
-    )
+        <div>
+            <HeaderAndTitle/>
+            <FirstContentContainer/>
+        </div>
+        )
 }
