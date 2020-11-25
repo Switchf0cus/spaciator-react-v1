@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme)=>({
   },
   TitleContainer: {
     paddingTop: '400px'
-  }
+  },
 }))
 
 const HeaderContainer = (props) => {
