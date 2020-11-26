@@ -1,10 +1,12 @@
 import React from 'react';
-import SimpleButton from '../components/LandingPage/main-button'
-import HeaderImage from '../components/LandingPage/main-header-image';
+import HeaderAndTitle from '../components/main-header';
+import FirstContentContainer from '../components/LandingPage/first-content-component'
 
 export default function FirstPage() {
     return(
-        <HeaderImage/>
-
-    )
+        <div>
+            <HeaderAndTitle/>
+            <FirstContentContainer/>
+        </div>
+        )
 }
