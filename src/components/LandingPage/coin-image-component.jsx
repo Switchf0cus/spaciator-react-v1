@@ -59,7 +59,6 @@ export default function SpinningCoin(item) {
     return(
         <ButtonBase
         className={classes.CoinGifSize}
-        disableRipple= 'true'
         onClick={clickHandler(item.ActiveClick)}
         >
         <Typography

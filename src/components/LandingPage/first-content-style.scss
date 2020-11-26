@@ -1,0 +1,54 @@
+@keyframes bg {
+    0% {
+      background-size: 0 3px, 3px 0, 0 3px, 3px 0;
+    }
+    25% {
+      background-size: 100% 3px, 3px 0, 0 3px, 3px 0;
+    }
+    50% {
+      background-size: 100% 3px, 3px 100%, 0 3px, 3px 0;
+    }
+    75% {
+      background-size: 100% 3px, 3px 100%, 100% 3px, 3px 0;
+    }
+    100% {
+      background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    }
+  }
+  
+.Description {
+    width: 65%;
+    padding: 2em;
+  
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, #a92cde 100%, #c9c9c9 100%),
+      linear-gradient(to bottom, #a92cde 100%, #c9c9c9 100%),
+      linear-gradient(to right, #a92cde 100%, #c9c9c9 100%),
+      linear-gradient(to bottom, #a92cde 100%, #c9c9c9 100%);
+    background-size: 100% 3px, 3px 100%, 100% 3px, 3px 100%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    animation: bg 2s cubic-bezier(0.19, 1, 0.22, 1) 1;
+    animation-play-state: paused;
+  }
+  
+  .Description:hover {
+    animation-play-state: running;
+  }
+  
+  .glow {
+    color: #dac22c;
+    font-family: 'Retro Gaming';
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #dac22c, 0 0 40px #dac22c;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #dac22c, 0 0 50px #dac22c;
+    }
+  }

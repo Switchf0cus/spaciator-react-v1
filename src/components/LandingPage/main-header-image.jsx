@@ -1,9 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import theme from '@material-ui/core/styles';
-import Header from '../../images/bgImages/spaciator-dim-background.png';
+import Header from '../../images/bgImages/header.png';
 import ImageHeader from '../main-header-component.jsx';
 import HeaderBox from './header-component';
+import TheFiveWs from './theFiveWs';
+import SpinningCoin from './coin-image-component';
+import HeaderContainer from './header-component';
 
 const useStyles = makeStyles((theme) =>({
     MainHeader: {
@@ -21,10 +24,12 @@ const useStyles = makeStyles((theme) =>({
 export default function HeaderImage(){
     const classes = useStyles();
     return(
+        <HeaderContainer/>
         // <div className={classes.MainHeader}>
         //     <img className={classes.HeaderImage} src={Header} alt="Main Header Image"/>
+          
         // </div>
-        <HeaderBox/>
+        // <HeaderBox/>
         
     )
 }

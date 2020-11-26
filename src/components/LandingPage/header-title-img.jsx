@@ -18,7 +18,7 @@ function HeaderTitle() {
         >
             <ImageTitle/>
             <Box
-            component="p"
+            component="img"
             className={classes.Title}
             style={{
                 backgroundImage: `url(${ImageTitle})`
