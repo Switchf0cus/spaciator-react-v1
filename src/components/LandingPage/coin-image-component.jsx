@@ -51,15 +51,16 @@ const useStyles = makeStyles((theme)=> ({
 
 export default function SpinningCoin(item) {
     const classes = useStyles();
-    const [activeItem, setActiveItem] = useState("")
-    
-    const clickHandler = useCallback((itemKey) => () => {
-        setActiveItem((itemKey));
-    },[]);
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
     return(
         <ButtonBase
         className={classes.CoinGifSize}
-        onClick={clickHandler(item.ActiveClick)}
         >
         <Typography
         className={classes.CoinText}
@@ -71,4 +72,3 @@ export default function SpinningCoin(item) {
         </ButtonBase>
 )
 }
-
