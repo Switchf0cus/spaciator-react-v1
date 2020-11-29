@@ -14,10 +14,16 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignContent: "center",
+    scrollSnapType: "masnatory",
+  },
+  FirstContainer: {
+    width: '100%',
+    height: '100vh',
   },
   ContentBox: {
     width: "100%",
     height: "100vh",
+    scrollSnapAlign: "start",
   },
   TitleBox: {
     width: "100%",
@@ -55,42 +61,44 @@ function FirstContent() {
   return (
     <Box component="div" className={classes.ContentContainer}>
       <Box component="div" className={classes.ContentBox}>
-        <Box className={classes.TitleBox}>
-          <Typography
-            variant="h2"
-            className={classes.Title}
-            className="Title"
-            style={{ fontFamily: "Retro Gaming", color: '#dac22c' }}
-          >
-            What?
-          </Typography>
-        </Box>
-        <Box className={classes.DescriptionBox}>
-          <Typography
-            variant="h4"
-            className={classes.Description}
-            className="Description"
-            style={{
-              fontFamily: "Brass Mono Comfortable",
-              color: "#fff",
-              backgroundColor: "#4a4949",
-              fontSize: ".7rem",
-              margin: "auto",
-              minWidth: "300px",
-            }}
-          >
-            Welcome to{" "}
-            <span className={classes.RetroFont}>Spaciator Unleashed !</span>{" "}
-            <br></br>
-            We are Nitrate Studios aka.{" "}
-            <span className={classes.RetroFont} className="glow-2">
-              NO3
-            </span>{" "}
-            <br></br>
-            Currently developing a single player game. <br></br>
-            Find a trailer down below{" "}
-            <span className={classes.RetroFont}>:)</span>
-          </Typography>
+        <Box component="div" className="FirstContainer" style={{height: '100vh'}}>
+          <Box className={classes.TitleBox}>
+            <Typography
+              variant="h2"
+              className={classes.Title}
+              className="Title"
+              style={{ fontFamily: "Retro Gaming", color: "#dac22c" }}
+            >
+              What?
+            </Typography>
+          </Box>
+          <Box className={classes.DescriptionBox}>
+            <Typography
+              variant="h4"
+              className={classes.Description}
+              className="Description"
+              style={{
+                fontFamily: "Brass Mono Comfortable",
+                color: "#fff",
+                backgroundColor: "#4a4949",
+                fontSize: ".7rem",
+                margin: "auto",
+                minWidth: "300px",
+              }}
+            >
+              Welcome to{" "}
+              <span className={classes.RetroFont}>Spaciator Unleashed !</span>{" "}
+              <br></br>
+              We are Nitrate Studios aka.{" "}
+              <span className={classes.RetroFont} className="glow-2">
+                NO3
+              </span>{" "}
+              <br></br>
+              Currently developing a single player game. <br></br>
+              Find a trailer down below{" "}
+              <span className={classes.RetroFont}>:)</span>
+            </Typography>
+          </Box>
         </Box>
         <Box
           component="div"
@@ -105,7 +113,7 @@ function FirstContent() {
               variant="h3"
               className={classes.Title}
               className="Title"
-              style={{ fontFamily: "Retro Gaming", color: '#dac22c' }}
+              style={{ fontFamily: "Retro Gaming", color: "#dac22c" }}
             >
               When?
             </Typography>
@@ -122,8 +130,8 @@ function FirstContent() {
                 fontSize: ".7rem",
                 margin: "auto",
                 minWidth: "300px",
-                padding: '2rem',
-            }}
+                padding: "2rem",
+              }}
             >
               As of now the official relese date has not yet been decided on.{" "}
               <br></br>
