@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme)=> ({
         height: '100px',  
         borderRadius: '20px',
         backgroundColor: '#a92cde',
-        marginTop: '80px',
+        // marginTop: '80px',
         borderBottom: '6px inset rgba(0,0,0,.5)',
         borderLeft: '6px inset rgba(0,0,0,.5)',
         borderRight: '6px inset rgba(255,255,255,.5)',
@@ -61,6 +61,7 @@ export default function SpinningCoin(item) {
     return(
         <ButtonBase
         className={classes.CoinGifSize}
+        style={{marginTop: '50px'}}
         >
         <Typography
         className={classes.CoinText}

@@ -123,8 +123,8 @@ export default function SimpleAccordion() {
           className="glow-border"
         >
           <Typography className={classes.AccordionText}>
-            This is a university project we are working on over the period of
-            the whole term. This module will make us confront many real-life
+            This is a university project we need to work on over the period of
+            the whole term. Throughout this module we will be confronted by many real-life
             challanges Developers face, alone or in a team.
           </Typography>
         </AccordionDetails>
