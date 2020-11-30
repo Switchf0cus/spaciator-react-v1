@@ -1,25 +1,25 @@
-.MainContainer {
-    background: linear-gradient(120deg, #bb80d4, #8cc88c, #d3ca92);
-    // background-size: 600% 600%;
-    height: 100%;
+// .MainContainer {
+//     background: linear-gradient(120deg, #bb80d4, #8cc88c, #d3ca92);
+//     // background-size: 600% 600%;
+//     height: 100%;
 
-    -webkit-animation: AnimationName 10s  infinite;
-    -moz-animation: AnimationName 10s  infinite;
-    animation: AnimationName 10s infinite;
-}
+//     -webkit-animation: AnimationName 10s  infinite;
+//     -moz-animation: AnimationName 10s  infinite;
+//     animation: AnimationName 10s infinite;
+// }
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 59%}
-    50%{background-position:100% 42%}
-    100%{background-position:0% 59%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 59%}
-    50%{background-position:100% 42%}
-    100%{background-position:0% 59%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 59%}
-    50%{background-position:100% 42%}
-    100%{background-position:0% 59%}
-}
+// @-webkit-keyframes AnimationName {
+//     0%{background-position:0% 59%}
+//     50%{background-position:100% 42%}
+//     100%{background-position:0% 59%}
+// }
+// @-moz-keyframes AnimationName {
+//     0%{background-position:0% 59%}
+//     50%{background-position:100% 42%}
+//     100%{background-position:0% 59%}
+// }
+// @keyframes AnimationName {
+//     0%{background-position:0% 59%}
+//     50%{background-position:100% 42%}
+//     100%{background-position:0% 59%}
+// }

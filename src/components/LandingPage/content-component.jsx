@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 function ContentContainer() {
   const classes = useStyles();
   return (
-    <Box component="div" className={classes.MainContainer} className="MainContainer-3">
+    <Box component="div" className={classes.MainContainer} className="AllContent">
             <FirstContent/>
     </Box>
   );
