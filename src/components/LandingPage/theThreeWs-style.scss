@@ -1,0 +1,16 @@
+.glow-border{
+    color: #dac22c;
+    -webkit-animation: glow 4s ease-in-out infinite alternate;
+    -moz-animation: glow 4s ease-in-out infinite alternate;
+    animation: glow 4s ease-in-out infinite alternate;
+    border-radius: 10px;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: inset 0 0 5px #fff,inset 0 0 10px #dac22c,inset 0 0 15px #dac22c,inset 0 0 20px #a92cde;
+    }
+    to {
+      box-shadow: inset 0 0 10px #fff,inset 0 0 20px #dac22c,inset 0 0 30px #dac22c,inset 0 0 40px #dac22c;
+    }
+  }

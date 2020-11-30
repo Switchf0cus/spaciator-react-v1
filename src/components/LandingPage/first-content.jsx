@@ -4,6 +4,8 @@ import { makeStyles } from "@material-ui/styles";
 import "./first-content-style.scss";
 import { Transform } from "@material-ui/icons";
 import SecondContent from "./second-content";
+import SimpleAccordion from './theThreeWs-component';
+import FooterCoin from './footer-coin';
 
 const useStyles = makeStyles((theme) => ({
   ContentContainer: {
@@ -17,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
     scrollSnapType: "masnatory",
   },
   FirstContainer: {
-    width: '100%',
-    height: '100vh',
+    width: "100%",
+    height: "100vh",
   },
   ContentBox: {
     width: "100%",
@@ -54,6 +56,21 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Retro Gaming",
     color: "#dac22c",
   },
+  ThreeContentsContainer: {
+    width: '100%',
+    height: '100%',
+  },
+  ThreeContents: {
+    width: '70%',
+    height: 'auto',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    boxSizing: 'border-box',
+    margin: 'auto',
+    paddingTop: '15%',
+    paddingBottom: '10%',
+  },
 }));
 
 function FirstContent() {
@@ -61,12 +78,16 @@ function FirstContent() {
   return (
     <Box component="div" className={classes.ContentContainer}>
       <Box component="div" className={classes.ContentBox}>
-        <Box component="div" className="FirstContainer" style={{height: '100vh'}}>
+        <Box
+          component="div"
+          className="FirstContainer"
+          style={{ height: "100vh" }}
+        >
           <Box className={classes.TitleBox}>
             <Typography
               variant="h2"
               className={classes.Title}
-              className="Title"
+              className="Title-2"
               style={{ fontFamily: "Retro Gaming", color: "#dac22c" }}
             >
               What?
@@ -112,7 +133,7 @@ function FirstContent() {
             <Typography
               variant="h3"
               className={classes.Title}
-              className="Title"
+              className="Title-2"
               style={{ fontFamily: "Retro Gaming", color: "#dac22c" }}
             >
               When?
@@ -135,13 +156,22 @@ function FirstContent() {
             >
               As of now the official relese date has not yet been decided on.{" "}
               <br></br>
-              However, in the coming days we are sending out alpha versions of
-              the game to a limited number of people. <br></br>
-              If you would like to know more, sign up to our newsletter{" "}
-              <span>:)</span>
+              However, in the coming days we are sending out{" "}
+              <span className="glow-">alpha</span> versions of the game to a{" "}
+              <span className="glow-">limited number of people.</span>{" "}
+              <br></br>
+              If you would like to know more, sign up to our{" "}
+              <span className="glow-">newsletter</span> <span>:)</span>
             </Typography>
           </Box>
         </Box>
+        <Box component="div" className={classes.ThreeContentsContainer} className="ThreeContentsContainer">
+          <Box component="div" className={classes.ThreeContents}>
+            <SimpleAccordion/>
+            </Box>
+           
+        </Box>
+         <FooterCoin/>
       </Box>
     </Box>
   );

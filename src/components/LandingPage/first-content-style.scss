@@ -89,7 +89,7 @@
   }
 
 
-  .Title {
+  .Title-2 {
     width: auto;
     display: inline-block;
     font-family: 'Retro Gaming';
@@ -123,9 +123,11 @@
 }
 
 
-.ContentContainer-2 {
+.FirstContainer, .ContentContainer-2, .ThreeContentsContainer{
   background: linear-gradient(331deg, #7500a7, #008700);
-  background-size: 400% 400%;
+  // background-size: 400% 400%;
+  height: auto;
+  min-height: 100vh;
 
   -webkit-animation: AnimationName 9s ease infinite;
   -moz-animation: AnimationName 9s ease infinite;
