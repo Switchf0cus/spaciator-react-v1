@@ -1,12 +1,16 @@
-import React from 'react';
-import FirstPage from '../src/pages/MainPage.jsx';
+import { Switch } from "@material-ui/core";
+import React from "react";
 
-import './App.css';
+import FirstPage from "../src/pages/MainPage.jsx";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <FirstPage/>
+      {/* <Switch> */}
+        <FirstPage />
+      {/* </Switch> */}
     </div>
   );
 }

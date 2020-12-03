@@ -6,6 +6,7 @@ import { Transform } from "@material-ui/icons";
 import SecondContent from "./second-content";
 import SimpleAccordion from './theThreeWs-component';
 import FooterCoin from './footer-coin';
+import SimpleModal from './modal-component';
 
 const useStyles = makeStyles((theme) => ({
   ContentContainer: {
@@ -168,6 +169,7 @@ function FirstContent() {
         <Box component="div" className={classes.ThreeContentsContainer} className="ThreeContentsContainer">
           <Box component="div" className={classes.ThreeContents}>
             <SimpleAccordion/>
+            {/* <SimpleModal/> */}
             </Box>
            
         </Box>

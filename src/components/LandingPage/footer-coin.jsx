@@ -16,7 +16,7 @@ function FooterCoin() {
 
     return(
         <Box component="div" className={classes.FooterContainer}>
-            <CoinButton style={{marginTop: '-25px'}}/>
+            <CoinButton disabled/>
         </Box>
         
     );

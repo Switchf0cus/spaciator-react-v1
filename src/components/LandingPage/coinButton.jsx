@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/styles';
 import { Button } from '@material-ui/core';
 import { BorderColor } from '@material-ui/icons';
 import Link from '@material-ui/core/Link';
-import SpinningCoin from './coin-image-component';
+// import SpinningCoin from './coin-image-component';
+import SimpleModal from './modal-component';
+import FormDialog from './coin-image-component';
 
 const useStyles = makeStyles((theme)=>({
     ButtonComponent: {
@@ -21,8 +23,9 @@ function CoinButton() {
     const classes = useStyles();
     return(
         
-
-            <SpinningCoin className={classes.ButtonComponent}/>
+        <FormDialog/>
+            // <SpinningCoin className={classes.ButtonComponent}/>
+            // <SimpleModal></SimpleModal>
 
       
 
