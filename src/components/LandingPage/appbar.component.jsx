@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     "& .MuiAppBar-colorPrimary": {
-      backgroundColor: '#4a4949'
+      backgroundColor: '#4a4949',
+      opacity: '0.8'
     },
     "& .MuiPaper-root": {
       boxShadow: '0'
@@ -37,9 +38,9 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            News
+            
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" style={{fontFamily: 'Retro Gaming', color: '#a92cde'}}>Login</Button>
         </Toolbar>
       </AppBar>
     </div>
