@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "8rem",
   },
   Title: {
-    fontSize: "3rem",
+    fontSize: "5vw",
     height: "100%",
     width: "100%",
     fontFamily: "Retro Gaming",
