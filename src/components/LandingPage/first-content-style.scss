@@ -74,7 +74,7 @@
     color: #dac22c;
     font-family: 'Retro Gaming';
     text-align: center;
-    -webkit-animation: glow .7s ease-in-out infinite alternate;
+    -webkit-animation: glow .7s ease-in-out infinite alternate; 
     -moz-animation: glow .7s ease-in-out infinite alternate;
     animation: glow .7s ease-in-out infinite alternate;
   }
@@ -126,7 +126,7 @@
 .FirstContainer, .ContentContainer-2, .ThreeContentsContainer{
   background: linear-gradient(331deg, #7500a7, #008700);
   // background-size: 400% 400%;
-  height: auto;
+  // height: auto;
   min-height: 100vh;
 
   -webkit-animation: AnimationName 9s ease infinite;
