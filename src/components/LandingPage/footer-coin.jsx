@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
             width: '40%',
             height: '100%',
             margin: 'auto',
-            paddingTop: '3rem',
+            paddingTop: '3.2rem',
            
         }
     },
@@ -31,12 +31,6 @@ const useStyles = makeStyles((theme) => ({
     height: "20vh",
     backgroundColor: "#4a4949",
   },
-//   SocialMediaIcons: {
-//       width: '40%',
-//       height: '100%',
-//       margin: 'auto',
-//       paddingTop: '2rem',
-//   },
   
 }));
 
