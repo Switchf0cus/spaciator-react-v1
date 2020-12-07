@@ -170,6 +170,7 @@ export default function FormDialog() {
             label="Username"
             type="name"
             fullWidth
+            autoComplete="off"
             style={{
               backgroundColor: "#dedddb",
               width: "60%",
@@ -192,6 +193,7 @@ export default function FormDialog() {
           />
           <TextField
             margin="dense"
+            autoComplete="off"
             id="name"
             label="Email"
             type="name"
