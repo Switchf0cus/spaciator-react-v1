@@ -142,7 +142,7 @@ export default function FormDialog() {
         disableRipple={false}
         className={classes.CoinGifSize}
         onClick={handleClickOpen}
-        style={{ marginTop: "3%" }}
+        style={{ marginTop: "1%" }}
         // onClick={() => { console.log('onClick'); }}
       >
         <span className={classes.CoinText}>Sign-Up!</span>
@@ -209,7 +209,7 @@ export default function FormDialog() {
             Cancel
           </Button>
           <Button onClick={handleClose} color="primary">
-            Subscribe
+            Sign-Up
           </Button>
         </DialogActions>
       </Dialog>
