@@ -145,7 +145,7 @@ export default function FormDialog() {
         style={{ marginTop: "3%" }}
         // onClick={() => { console.log('onClick'); }}
       >
-        <span className={classes.CoinText}>Click Me!</span>
+        <span className={classes.CoinText}>Sign-Up!</span>
       </ButtonBase>
       <Dialog
         open={open}
@@ -157,9 +157,7 @@ export default function FormDialog() {
         <DialogTitle>Sign-Up</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Sign-Up in order to collect the coins that are hidden all over the
-            website. <br></br>Using those coins you can activate a map or your
-            choice
+            Sign-Up in order to acess further details :)
           </DialogContentText>
           {/* <AnimateRun/> */}
           {/* <SmallAnimationRun/> */}

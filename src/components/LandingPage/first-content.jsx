@@ -202,7 +202,7 @@ function FirstContent() {
               <span className="glow-">alpha</span> versions of the game to a{" "}
               <span className="glow-">limited number of people.</span> <br></br>
               If you would like to know more, sign up to our{" "}
-              <span className="glow-">newsletter</span> <span>:)</span>
+              <span style={{color: '#dac22c', cursor: 'pointer'}} link="newsletter">newsletter</span> <span>:)</span>
             </Typography>
           </Box>
         </Box>
@@ -214,25 +214,9 @@ function FirstContent() {
         >
           <Box component="div" className={classes.ThreeContents}>
             <SimpleAccordion />
-            {/* <SimpleModal/> */}
           </Box>
-          {/* <Box style={{width: '50%', backgroundColor: '#dedddb', padding: '2rem', margin: 'auto', borderRadius: '7px', border: '3px solid #dac22c'}}>
-            <HubSpotForm 
-          
-            portalId='8765503'
-            formId='c8320540-0730-4706-9ea1-5ccc7b98c13f'
-          />
-          </Box> */}
-          
-          {/* <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
-          <script>
-            hbspt.forms.create({
-              portalId:'8765503';
-              formId: 'c8320540-0730-4706-9ea1-5ccc7b98c13f'
-            });
-          </script> */}
         </Box>
-        <FooterCoin />
+        <FooterCoin  id="newsletter"/>
       </Box>
     </Box>
   );
