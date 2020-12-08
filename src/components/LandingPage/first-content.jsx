@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/styles";
 import "./first-content-style.scss";
 import SimpleAccordion from "./theThreeWs-component";
 import FooterCoin from "./footer-coin";
+import HubSpotForm from 'react-hubspot-form';
 
 const useStyles = makeStyles((theme) => ({
   ContentContainer: {
@@ -71,7 +72,16 @@ const useStyles = makeStyles((theme) => ({
   },
   trailerDiv: {
     margin: "auto",
+    // border: '3px solid red',
+    width: '100%',
+    height: '70%'
   },
+  FormStyles: {
+    width: '50%',
+  },
+  "& .hs-form-c8320540-0730-4706-9ea1-5ccc7b98c13f_0581dee3-ca74-423c-a1a9-75fc4d2cdbc4.hs-form": {
+    width:' 50%'
+  }
 }));
 
 function FirstContent() {
@@ -143,8 +153,8 @@ function FirstContent() {
           <Box className={classes.DescriptionBox}>
             <div className={classes.trailerDiv}>
               <iframe
-                width="960"
-                height="615"
+              width="100%"
+              height="100%"
                 src="https://www.youtube.com/embed/hLbNd9SyoQo"
                 frameBorder="1"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -206,6 +216,21 @@ function FirstContent() {
             <SimpleAccordion />
             {/* <SimpleModal/> */}
           </Box>
+          {/* <Box style={{width: '50%', backgroundColor: '#dedddb', padding: '2rem', margin: 'auto', borderRadius: '7px', border: '3px solid #dac22c'}}>
+            <HubSpotForm 
+          
+            portalId='8765503'
+            formId='c8320540-0730-4706-9ea1-5ccc7b98c13f'
+          />
+          </Box> */}
+          
+          {/* <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+          <script>
+            hbspt.forms.create({
+              portalId:'8765503';
+              formId: 'c8320540-0730-4706-9ea1-5ccc7b98c13f'
+            });
+          </script> */}
         </Box>
         <FooterCoin />
       </Box>
