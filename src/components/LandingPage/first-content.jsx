@@ -127,12 +127,12 @@ function FirstContent() {
               </span>{" "}
               <br></br>
               Currently developing a single player game. <br></br>
-              Find a trailer down below{" "}
+              As seen in the trailer above{" "}
               <span className={classes.RetroFont}>:)</span>
             </Typography>
           </Box>
         </Box>
-        <Box
+        {/*  <Box
           component="div"
           className={classes.ContentContainer}
           className="ContentContainer-2"
@@ -140,7 +140,7 @@ function FirstContent() {
             height: "100vh",
           }}
         >
-          <Box className={classes.TitleBox}>
+         <Box className={classes.TitleBox}>
             <Typography
               variant="h3"
               className={classes.Title}
@@ -162,7 +162,7 @@ function FirstContent() {
               ></iframe>
             </div>
           </Box>
-        </Box>
+        </Box> */}
         <Box
           component="div"
           className={classes.ContentContainer}

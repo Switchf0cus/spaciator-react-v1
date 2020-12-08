@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import SpinningGif from "../../images/bgImages/cropped-coin.gif";
+import RunningBob from "../../images/Bob_running.gif";
 import { makeStyles } from "@material-ui/styles";
 import { ButtonBase } from "@material-ui/core";
 
@@ -13,7 +13,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 
 const useStyles = makeStyles((theme) => ({
   CoinGifSize: {
-    backgroundImage: `url(${SpinningGif})`,
+    backgroundImage: `url(${RunningBob})`,
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     width: "220px",
