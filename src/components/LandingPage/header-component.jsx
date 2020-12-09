@@ -3,18 +3,35 @@ import { Box, Typography } from "@material-ui/core";
 import TheFiveWs from "./theFiveWs";
 import { makeStyles } from "@material-ui/styles";
 import FullImage from "../../images/bgImages/header.png";
+import FirstBackground from '../../images/bgImages/top_bg.png';
+import FirstHeaderTitle from '../../images/bgImages/spaciator_logo-title.png';
 import CoinButton from "./coinButton";
 
 const useStyles = makeStyles((theme) => ({
   Title: {
     height: "110vh",
-    backgroundImage: `url(${FullImage})`,
+    backgroundImage: `url(${FirstBackground})`,
     // backgroundAttachment: 'fixed',
     backgroundRepeat: "no-repeat",
     backgroundSize: "100% 100%",
   },
   TitleContainer: {
-    paddingTop: "400px",
+    paddingTop: "0px",
+  },
+  HeaderTitleBox: {
+    width: '100vw',
+    height: '45vh',
+    // border: '3px solid red',
+    paddingTop: '5rem',
+  },
+  HeaderTitleContent: {
+    backgroundImage: `url(${FirstHeaderTitle})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100% 100%',
+    width: '50%',
+    height: '100%',
+    margin: 'auto',
+    // paddingTop: '15rem',
   },
   trailerDiv: {
     margin: "auto",
@@ -28,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '1.5rem',
     // boxShadow: 'inset 0 0 10px #dac22c',
     margin: 'auto',
-    marginTop: '2rem',
+    // marginTop: '2rem',
     color: '#dedddb',
     // borderRadius: '6px'
     },
@@ -48,6 +65,11 @@ const HeaderContainer = (props) => {
   const classes = useStyles();
   return (
     <Box component="div" className={classes.Title}>
+      <Box component="div" className={classes.HeaderTitleBox}>
+        <Box className={classes.HeaderTitleContent}>
+
+        </Box>
+      </Box>
       <Box className={classes.TitleContainer} component="div">
         {/* <TheFiveWs className={classes.thefiveTitle} />*/}
         <Box component="div" className={classes.IntroText}>
