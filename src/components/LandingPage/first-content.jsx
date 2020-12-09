@@ -3,7 +3,9 @@ import { Box, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import "./first-content-style.scss";
 import SimpleAccordion from "./theThreeWs-component";
-import FooterCoin from "./footer-coin";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import FacebookIcon from '@material-ui/icons/Facebook';
 import HubSpotForm from 'react-hubspot-form';
 
 const useStyles = makeStyles((theme) => ({
@@ -72,16 +74,42 @@ const useStyles = makeStyles((theme) => ({
   },
   trailerDiv: {
     margin: "auto",
-    // border: '3px solid red',
-    width: '100%',
-    height: '70%'
+    borderRadius: '6px',
+    border: '3px solid #dac22c',
+    width: '70%',
+    height: '50%'
   },
   FormStyles: {
     width: '50%',
   },
   "& .hs-form-c8320540-0730-4706-9ea1-5ccc7b98c13f_0581dee3-ca74-423c-a1a9-75fc4d2cdbc4.hs-form": {
     width:' 50%'
-  }
+  },
+  root: {
+    "& .MuiSvgIcon-root": {
+        color: '#a92cde',
+        fontSize: '2.5rem',
+        margin: '1rem',
+         "& :hover": {
+            color: '#dac22c',
+            transform: 'scale(1.1)',
+            transition: '300ms'
+        }
+    },
+    "&.MuiBox-root-51": {
+        width: '40%',
+        height: '100%',
+        margin: 'auto',
+        paddingTop: '3.2rem',
+       
+    }
+},
+FooterContainer: {
+width: "100%",
+// height: "auto",
+backgroundColor: "#4a4949",
+padding: '2rem',
+},
 }));
 
 function FirstContent() {
@@ -89,7 +117,7 @@ function FirstContent() {
   return (
     <Box component="div" className={classes.ContentContainer}>
       <Box component="div" className={classes.ContentBox}>
-        <Box
+        {/* <Box
           component="div"
           className="FirstContainer"
           style={{ height: "100vh" }}
@@ -127,12 +155,12 @@ function FirstContent() {
               </span>{" "}
               <br></br>
               Currently developing a single player game. <br></br>
-              Find a trailer down below{" "}
+              As seen in the trailer above{" "}
               <span className={classes.RetroFont}>:)</span>
             </Typography>
           </Box>
-        </Box>
-        <Box
+        </Box> */}
+         <Box
           component="div"
           className={classes.ContentContainer}
           className="ContentContainer-2"
@@ -140,7 +168,7 @@ function FirstContent() {
             height: "100vh",
           }}
         >
-          <Box className={classes.TitleBox}>
+         <Box className={classes.TitleBox}>
             <Typography
               variant="h3"
               className={classes.Title}
@@ -156,7 +184,7 @@ function FirstContent() {
               width="100%"
               height="100%"
                 src="https://www.youtube.com/embed/hLbNd9SyoQo"
-                frameBorder="1"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
@@ -166,7 +194,7 @@ function FirstContent() {
         <Box
           component="div"
           className={classes.ContentContainer}
-          className="ContentContainer-2"
+          className="ContentContainer-3"
           style={{
             height: "100vh",
           }}
@@ -194,6 +222,7 @@ function FirstContent() {
                 margin: "auto",
                 minWidth: "300px",
                 padding: "2rem",
+                paddingTop: '2.5rem',
               }}
             >
               As of now the official relese date has not yet been decided on.{" "}
@@ -202,7 +231,7 @@ function FirstContent() {
               <span className="glow-">alpha</span> versions of the game to a{" "}
               <span className="glow-">limited number of people.</span> <br></br>
               If you would like to know more, sign up to our{" "}
-              <span className="glow-">newsletter</span> <span>:)</span>
+              <span style={{color: '#dac22c', cursor: 'pointer'}} link="newsletter">newsletter</span> <span>:)</span>
             </Typography>
           </Box>
         </Box>
@@ -214,25 +243,24 @@ function FirstContent() {
         >
           <Box component="div" className={classes.ThreeContents}>
             <SimpleAccordion />
-            {/* <SimpleModal/> */}
           </Box>
-          {/* <Box style={{width: '50%', backgroundColor: '#dedddb', padding: '2rem', margin: 'auto', borderRadius: '7px', border: '3px solid #dac22c'}}>
+        </Box>
+        {/* <FooterCoin  id="newsletter"/> */}
+        <Box component="div" className={classes.FooterContainer}>
+      <Box component="div" className={classes.root}>
+          <TwitterIcon onClick={event => window.location.href='https://twitter.com/NitrateStudios'} />
+          <YouTubeIcon onClick={event => window.location.href='https://www.youtube.com/channel/UCgbvrA3LnzTYbX4sX0K3XJw'} />
+          <FacebookIcon onClick={event => window.location.href='https://www.facebook.com/Nitrate-Studios-107845914479478'} />
+      </Box>
+      <Box style={{ maxWidth: '500px', backgroundColor: '#878682', padding: '2rem', margin: 'auto', border: '2px solid #dac22c'}}>
             <HubSpotForm 
           
             portalId='8765503'
             formId='c8320540-0730-4706-9ea1-5ccc7b98c13f'
           />
-          </Box> */}
-          
-          {/* <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
-          <script>
-            hbspt.forms.create({
-              portalId:'8765503';
-              formId: 'c8320540-0730-4706-9ea1-5ccc7b98c13f'
-            });
-          </script> */}
-        </Box>
-        <FooterCoin />
+          </Box>
+      
+    </Box>
       </Box>
     </Box>
   );

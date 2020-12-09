@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import SpinningGif from "../../images/bgImages/cropped-coin.gif";
+import RunningBob from "../../images/Bob_running.gif";
 import { makeStyles } from "@material-ui/styles";
 import { ButtonBase } from "@material-ui/core";
 
@@ -13,7 +13,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 
 const useStyles = makeStyles((theme) => ({
   CoinGifSize: {
-    backgroundImage: `url(${SpinningGif})`,
+    backgroundImage: `url(${RunningBob})`,
     backgroundSize: "contain",
     backgroundRepeat: "no-repeat",
     width: "220px",
@@ -142,10 +142,10 @@ export default function FormDialog() {
         disableRipple={false}
         className={classes.CoinGifSize}
         onClick={handleClickOpen}
-        style={{ marginTop: "3%" }}
+        style={{ marginTop: "1%" }}
         // onClick={() => { console.log('onClick'); }}
       >
-        <span className={classes.CoinText}>Click Me!</span>
+        <span className={classes.CoinText}>Sign-Up!</span>
       </ButtonBase>
       <Dialog
         open={open}
@@ -157,9 +157,7 @@ export default function FormDialog() {
         <DialogTitle>Sign-Up</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Sign-Up in order to collect the coins that are hidden all over the
-            website. <br></br>Using those coins you can activate a map or your
-            choice
+            Sign-Up in order to acess further details :)
           </DialogContentText>
           {/* <AnimateRun/> */}
           {/* <SmallAnimationRun/> */}
@@ -211,7 +209,7 @@ export default function FormDialog() {
             Cancel
           </Button>
           <Button onClick={handleClose} color="primary">
-            Subscribe
+            Sign-Up
           </Button>
         </DialogActions>
       </Dialog>

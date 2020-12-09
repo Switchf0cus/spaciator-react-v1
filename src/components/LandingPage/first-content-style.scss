@@ -121,31 +121,45 @@
     border-color: #942bb4;
   }
 }
-
-
-.FirstContainer, .ContentContainer-2, .ThreeContentsContainer{
-  background: linear-gradient(331deg, #7500a7, #008700);
-  // background-size: 400% 400%;
-  // height: auto;
-  min-height: 100vh;
-
-  -webkit-animation: AnimationName 9s ease infinite;
-  -moz-animation: AnimationName 9s ease infinite;
-  animation: AnimationName 9s ease infinite;
+.ContentContainer-3{
+  background-image: url(../../images/bgImages/bottom_bg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
+.ThreeContentsContainer{
+  background-image: url(../../images/bgImages/bottom2.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.ContentContainer-2 {
+//   background: linear-gradient(331deg, #7500a7, #008700);
+//   // background-size: 400% 400%;
+//   // height: auto;
+//   min-height: 100vh;
 
-@-webkit-keyframes AnimationName {
-  0%{background-position:30% 0%}
-  50%{background-position:71% 100%}
-  100%{background-position:30% 0%}
-}
-@-moz-keyframes AnimationName {
-  0%{background-position:30% 0%}
-  50%{background-position:71% 100%}
-  100%{background-position:30% 0%}
-}
-@keyframes AnimationName {
-  0%{background-position:30% 0%}
-  50%{background-position:71% 100%}
-  100%{background-position:30% 0%}
+//   -webkit-animation: AnimationName 9s ease infinite;
+//   -moz-animation: AnimationName 9s ease infinite;
+//   animation: AnimationName 9s ease infinite;
+// }
+
+// @-webkit-keyframes AnimationName {
+//   0%{background-position:30% 0%}
+//   50%{background-position:71% 100%}
+//   100%{background-position:30% 0%}
+// }
+// @-moz-keyframes AnimationName {
+//   0%{background-position:30% 0%}
+//   50%{background-position:71% 100%}
+//   100%{background-position:30% 0%}
+// }
+// @keyframes AnimationName {
+//   0%{background-position:30% 0%}
+//   50%{background-position:71% 100%}
+//   100%{background-position:30% 0%}
+background-image: url(../../images/bgImages/middle_bg.png);
+background-size: 100% 100%;
+background-repeat: no-repeat;
+height: 100vh;
 }
