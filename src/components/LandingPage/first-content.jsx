@@ -10,14 +10,14 @@ import HubSpotForm from 'react-hubspot-form';
 
 const useStyles = makeStyles((theme) => ({
   ContentContainer: {
-    width: "100%",
+    width: "100vw",
     height: "auto",
     display: "flex",
     flexWrap: "wrap",
     flexDirection: "column",
     justifyContent: "center",
     alignContent: "center",
-    scrollSnapType: "masnatory",
+    scrollSnapType: "mandatory",
   },
   FirstContainer: {
     width: "100%",
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: "8rem",
   },
   Title: {
-    fontSize: "3rem",
+    fontSize: "2vw",
     height: "100%",
     width: "100%",
     fontFamily: "Retro Gaming",
@@ -110,6 +110,9 @@ width: "100%",
 backgroundColor: "#4a4949",
 padding: '2rem',
 },
+TextHightlight: {
+  color: '#a92cde',
+}
 }));
 
 function FirstContent() {
@@ -225,13 +228,13 @@ function FirstContent() {
                 paddingTop: '2.5rem',
               }}
             >
-              As of now the official relese date has not yet been decided on.{" "}
+              As of now the official release date has not yet been decided on.{" "}
               <br></br>
-              However, in the coming days we are sending out{" "}
-              <span className="glow-">alpha</span> versions of the game to a{" "}
+              However, in the coming days we are releasing a{" "}
+              <span className={classes.TextHightlight}>beta</span> versions of the game to a{" "}
               <span className="glow-">limited number of people.</span> <br></br>
               If you would like to know more, sign up to our{" "}
-              <span style={{color: '#dac22c', cursor: 'pointer'}} link="newsletter">newsletter</span> <span>:)</span>
+              <span style={{color: '#dac22c', cursor: 'pointer'}} link="newsletter">newsletter</span> in the footer <span>:)</span>
             </Typography>
           </Box>
         </Box>

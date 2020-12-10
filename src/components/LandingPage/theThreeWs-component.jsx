@@ -28,12 +28,12 @@ const useStyles = makeStyles((theme) => ({
     color: "#dedddb",
   },
   AccordionText: {
-    width: "70%",
+    width: "80vw",
     margin: "auto",
     padding: "2rem",
     color: "#dedddb",
     fontFamily: "Brass Mono Comfortable",
-    fontSize: "1.3rem",
+    fontSize: "1vw",
   },
   AccordionDetailsBox: {
     backgroundColor: "#4a4949",

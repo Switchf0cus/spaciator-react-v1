@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import RunningBob from "../../images/Bob_running.gif";
 import { makeStyles } from "@material-ui/styles";
-import { ButtonBase } from "@material-ui/core";
+import { ButtonBase, Typography } from "@material-ui/core";
 
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -10,6 +10,10 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
+import { useEffect } from "react";
+
+import axios from 'axios';
+import useAxios from 'axios-hooks';
 
 const useStyles = makeStyles((theme) => ({
   CoinGifSize: {
@@ -20,7 +24,6 @@ const useStyles = makeStyles((theme) => ({
     height: "100px",
     borderRadius: "20px",
     backgroundColor: "#a92cde",
-    // marginTop: '80px',
     borderBottom: "6px inset rgba(0,0,0,.5)",
     borderLeft: "6px inset rgba(0,0,0,.5)",
     borderRight: "6px inset rgba(255,255,255,.5)",
@@ -30,18 +33,9 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     display: "inline-block",
     fontSize: "2.3rem",
-    // margin: "1rem",
     minWidth: "200px",
-    // padding: ".3rem",
     textTransform: "uppercase",
-    // '& :onclick': {
-    //     borderBottom: '4px inset rgba(0,0,0,.9)'
-    // }
   },
-  // ClickMeModal: {
-  //   fontFamily: 'Retro Gaming',
-  //   color: '#dac22c',
-  // },
   CoinText: {
     fontSize: "1.5rem",
     marginLeft: "60px",
@@ -114,9 +108,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function FormDialog() {
+// function Submit() {
+//   var user = document.getElementById("name");
+//   var pass = document.getElementById("pswd");
+
+//   document.getElementById("username").value = user;
+//   document.getElementById("password").value = pass;
+
+//   document.forms["myform"].Submit();
+// }
+
+export default function FormDialog({props}) {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [user, setUser] = useState("");
+  const [password, setPassword] = useState("");
+  const [profile, setProfile] = useState(null);
+
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -125,6 +133,53 @@ export default function FormDialog() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const submitRegister = () => {
+       fetch("http://www.ugamer.gr/spaciators/register.php?username=" +
+      user +
+      "&password=" +
+      password)
+      .then(response => response.json())
+      .then( data => console.log(data.text));
+  };
+
+
+  //  if(profile ===  "OKOK")
+  //       {
+  // alert("Complete");
+  //       }
+  //       else
+  //       {
+  //         alert("Failed" + profile);
+  //       }
+//   const AccessData = async () => {
+//     await submitRegister();
+
+//     setProfile(submitRegister.data.text);
+//     if(profile ===  "OKOK")
+//       {
+// alert("Complete");
+//       }
+//       else
+//       {
+//         alert("Failed" + profile);
+//       }
+//   }
+
+  // useEffect(async () => await submitRegister()
+  //   setSignup()
+  // )
+  
+
+  // useEffect(async () => {
+  //   const response = await axios("http://www.ugamer.gr/spaciators/register.php?username=" +
+  //       user +
+  //       "&password=" +
+  //       password);
+  //   const data = await response.json(response.text);
+  //   setSignup(data);
+  
+  // });
 
   return (
     <div>
@@ -143,7 +198,6 @@ export default function FormDialog() {
         className={classes.CoinGifSize}
         onClick={handleClickOpen}
         style={{ marginTop: "1%" }}
-        // onClick={() => { console.log('onClick'); }}
       >
         <span className={classes.CoinText}>Sign-Up!</span>
       </ButtonBase>
@@ -152,21 +206,29 @@ export default function FormDialog() {
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
         className={classes.root}
-        // onShow={ () => {this.textInput.focus(); }}
       >
+        <form
+          name="myform"
+          method="get"
+          action="www.ugamer.gr/spaciators/register.php"
+        >
+          <input type="hidden" name="username" value={user} />
+          <input type="hidden" name="password" value={password} />
+        </form>
+
         <DialogTitle>Sign-Up</DialogTitle>
         <DialogContent>
           <DialogContentText>
             Sign-Up in order to acess further details :)
           </DialogContentText>
-          {/* <AnimateRun/> */}
-          {/* <SmallAnimationRun/> */}
+
           <TextField
-            // ref={ (input) => {this.textInput = input; }}
+            value={user}
+            onChange={(e) => setUser(e.target.value)}
             margin="dense"
             id="name"
             label="Username"
-            type="name"
+            type="text"
             fullWidth
             autoComplete="off"
             style={{
@@ -177,8 +239,10 @@ export default function FormDialog() {
             }}
           />
           <TextField
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             margin="dense"
-            id="name"
+            id="pswd"
             label="Password"
             type="password"
             fullWidth
@@ -203,12 +267,15 @@ export default function FormDialog() {
               marginLeft: "10%",
             }}
           />
+          <DialogContentText>
+
+          </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={submitRegister} color="primary">
             Sign-Up
           </Button>
         </DialogActions>

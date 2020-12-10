@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     },
     IntroTextText: {
       fontFamily: 'Retro Gaming',
-      fontSize: '1.2rem',
+      fontSize: '1vw',
     },
     TextHighlight1: {
       color: '#a92cde',
