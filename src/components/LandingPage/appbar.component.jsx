@@ -9,7 +9,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    // flexGrow: 1,
+    width: '100vw',
     "& .MuiAppBar-colorPrimary": {
       backgroundColor: '#4a4949',
       opacity: '0.8'
